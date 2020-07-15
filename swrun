@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+import io, sys
+import seqalign
+
+# Command-line arguments: DNA sequences in plain text format
+f1 = io.open(sys.argv[1], 'r')
+seq1 = f1.readline()
+seq1 = str.strip(seq1)
+
+f2 = io.open(sys.argv[2], 'r')
+seq2 = f2.readline()
+seq2 = str.strip(seq2)
+
+seqalign.smith(seq1, seq2)
